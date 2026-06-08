@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" role="img" aria-label="FLIP40.COM Favicon">
+  <defs>
+    <filter id="glow-fav" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="1.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="32" height="32" fill="#080808" rx="4"/>
+
+  <!-- Simplified double-arrow at favicon scale -->
+  <g filter="url(#glow-fav)">
+    <!-- Arrow right -->
+    <polyline points="4,12 20,12 20,8 28,16 20,24 20,20 4,20"
+              fill="none" stroke="#c8ff00" stroke-width="2"
+              stroke-linejoin="miter" stroke-linecap="square"/>
+  </g>
+
+  <!-- Pixel corner accents -->
+  <rect x="1" y="1" width="3" height="1" fill="#c8ff00" opacity="0.4"/>
+  <rect x="1" y="1" width="1" height="3" fill="#c8ff00" opacity="0.4"/>
+  <rect x="28" y="30" width="3" height="1" fill="#c8ff00" opacity="0.4"/>
+  <rect x="30" y="28" width="1" height="3" fill="#c8ff00" opacity="0.4"/>
+</svg>

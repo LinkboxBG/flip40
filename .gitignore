@@ -1,0 +1,7 @@
+node_modules/
+flip4o/node_modules/
+flip4o/.next/
+.env*
+.vercel/
+.DS_Store
+*.pem

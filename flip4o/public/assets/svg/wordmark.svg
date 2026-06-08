@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 160" width="560" height="160" role="img" aria-label="FLIP40.COM Wordmark">
+  <defs>
+    <filter id="glow-wm" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="5" result="blur1"/>
+      <feGaussianBlur stdDeviation="12" result="blur2"/>
+      <feGaussianBlur stdDeviation="24" result="blur3"/>
+      <feMerge>
+        <feMergeNode in="blur3"/>
+        <feMergeNode in="blur2"/>
+        <feMergeNode in="blur1"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="glow-outline-wm" x="-15%" y="-15%" width="130%" height="130%">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Transparent background -->
+  <rect width="560" height="160" fill="none"/>
+
+  <!-- ===== FLIP ===== -->
+  <!-- F -->
+  <g filter="url(#glow-wm)">
+    <rect x="10" y="10" width="13" height="90" fill="#c8ff00"/>
+    <rect x="10" y="10" width="62" height="15" fill="#c8ff00"/>
+    <rect x="10" y="50" width="46" height="13" fill="#c8ff00"/>
+    <!-- Distress marks -->
+    <rect x="14" y="30" width="7" height="4" fill="#080808" opacity="0.55"/>
+    <rect x="22" y="64" width="5" height="3" fill="#080808" opacity="0.45"/>
+  </g>
+
+  <!-- L -->
+  <g filter="url(#glow-wm)">
+    <rect x="88" y="10" width="13" height="90" fill="#c8ff00"/>
+    <rect x="88" y="85" width="58" height="15" fill="#c8ff00"/>
+    <!-- Distress -->
+    <rect x="92" y="48" width="6" height="5" fill="#080808" opacity="0.5"/>
+  </g>
+
+  <!-- I -->
+  <g filter="url(#glow-wm)">
+    <rect x="162" y="10" width="13" height="90" fill="#c8ff00"/>
+    <!-- Distress -->
+    <rect x="164" y="35" width="7" height="4" fill="#080808" opacity="0.55"/>
+  </g>
+
+  <!-- P -->
+  <g filter="url(#glow-wm)">
+    <rect x="192" y="10" width="13" height="90" fill="#c8ff00"/>
+    <rect x="192" y="10" width="58" height="14" fill="#c8ff00"/>
+    <rect x="242" y="10" width="13" height="46" fill="#c8ff00"/>
+    <rect x="192" y="46" width="63" height="14" fill="#c8ff00"/>
+    <!-- Inner P cutout -->
+    <rect x="205" y="24" width="37" height="22" fill="#080808"/>
+    <!-- Distress -->
+    <rect x="197" y="78" width="6" height="5" fill="#080808" opacity="0.5"/>
+  </g>
+
+  <!-- ===== 4o ===== -->
+  <!-- "4" outline -->
+  <g filter="url(#glow-outline-wm)">
+    <line x1="330" y1="20" x2="296" y2="82" stroke="#c8ff00" stroke-width="4" stroke-linecap="square"/>
+    <line x1="296" y1="82" x2="348" y2="82" stroke="#c8ff00" stroke-width="4" stroke-linecap="square"/>
+    <line x1="330" y1="20" x2="330" y2="120" stroke="#c8ff00" stroke-width="4" stroke-linecap="square"/>
+    <line x1="342" y1="20" x2="342" y2="120" stroke="#c8ff00" stroke-width="4" stroke-linecap="square"/>
+    <line x1="342" y1="20" x2="342" y2="120" stroke="#c8ff00" stroke-width="4" stroke-linecap="square"/>
+  </g>
+
+  <!-- "o" chamfered rectangle -->
+  <g filter="url(#glow-outline-wm)">
+    <!-- Outer -->
+    <polygon points="368,30 376,22 444,22 452,30 452,110 444,118 376,118 368,110"
+             fill="none" stroke="#c8ff00" stroke-width="4" stroke-linejoin="miter"/>
+    <!-- Inner -->
+    <polygon points="381,46 387,40 433,40 439,46 439,94 433,100 387,100 381,94"
+             fill="none" stroke="#c8ff00" stroke-width="2.5" stroke-linejoin="miter"/>
+  </g>
+
+  <!-- Tagline / descriptor -->
+  <text x="10" y="148"
+        font-family="'DM Mono', 'Courier New', monospace"
+        font-size="11"
+        font-weight="500"
+        letter-spacing="0.25em"
+        text-transform="uppercase"
+        fill="#888888">FLIP · TRADE · WIN</text>
+</svg>

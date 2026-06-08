@@ -1,0 +1,11 @@
+{
+  "name": "flip4o-workspace",
+  "private": true,
+  "scripts": {
+    "dev": "npm run dev --prefix flip4o",
+    "build": "npm run build --prefix flip4o",
+    "start": "npm run start --prefix flip4o",
+    "lint": "npm run lint --prefix flip4o",
+    "typecheck": "npm run typecheck --prefix flip4o"
+  }
+}

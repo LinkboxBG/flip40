@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 240" width="680" height="240" role="img" aria-label="FLIP40.COM Logo">
+  <defs>
+    <!-- Lime neon glow filter -->
+    <filter id="glow-lime" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="6" result="blur1"/>
+      <feGaussianBlur stdDeviation="14" result="blur2"/>
+      <feGaussianBlur stdDeviation="28" result="blur3"/>
+      <feMerge>
+        <feMergeNode in="blur3"/>
+        <feMergeNode in="blur2"/>
+        <feMergeNode in="blur1"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <!-- Subtle glow for outlines -->
+    <filter id="glow-outline" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <!-- Violet shadow offset filter -->
+    <filter id="violet-shadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feOffset dx="-4" dy="4" result="offset"/>
+      <feFlood flood-color="#9b5cf6" result="color"/>
+      <feComposite in="color" in2="offset" operator="in" result="shadow"/>
+      <feMerge>
+        <feMergeNode in="shadow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <!-- Noise texture for distressed feel -->
+    <filter id="noise">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="4" stitchTiles="stitch" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="2" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+  </defs>
+
+  <!-- Dark background -->
+  <rect width="680" height="240" fill="#080808"/>
+
+  <!-- ========== FLIP TEXT ========== -->
+  <!-- F -->
+  <g filter="url(#glow-lime)">
+    <rect x="42" y="28" width="16" height="104" fill="#c8ff00"/>
+    <rect x="42" y="28" width="72" height="18" fill="#c8ff00"/>
+    <rect x="42" y="70" width="54" height="16" fill="#c8ff00"/>
+    <!-- Distress cuts on F -->
+    <rect x="46" y="44" width="8" height="4" fill="#080808" opacity="0.6"/>
+    <rect x="58" y="88" width="6" height="3" fill="#080808" opacity="0.5"/>
+  </g>
+
+  <!-- L -->
+  <g filter="url(#glow-lime)">
+    <rect x="126" y="28" width="16" height="104" fill="#c8ff00"/>
+    <rect x="126" y="116" width="68" height="16" fill="#c8ff00"/>
+    <!-- Distress -->
+    <rect x="130" y="58" width="7" height="5" fill="#080808" opacity="0.5"/>
+  </g>
+
+  <!-- I -->
+  <g filter="url(#glow-lime)">
+    <rect x="216" y="28" width="16" height="104" fill="#c8ff00"/>
+    <!-- Distress -->
+    <rect x="218" y="72" width="8" height="4" fill="#080808" opacity="0.6"/>
+    <rect x="216" y="48" width="5" height="6" fill="#080808" opacity="0.4"/>
+  </g>
+
+  <!-- P -->
+  <g filter="url(#glow-lime)">
+    <rect x="252" y="28" width="16" height="104" fill="#c8ff00"/>
+    <rect x="252" y="28" width="68" height="16" fill="#c8ff00"/>
+    <rect x="304" y="28" width="16" height="52" fill="#c8ff00"/>
+    <rect x="252" y="64" width="68" height="16" fill="#c8ff00"/>
+    <!-- P inner cutout -->
+    <rect x="268" y="44" width="36" height="20" fill="#080808"/>
+    <!-- Distress -->
+    <rect x="256" y="100" width="6" height="5" fill="#080808" opacity="0.5"/>
+  </g>
+
+  <!-- ========== 4o ========== -->
+  <!-- "4" — outline chamfered style -->
+  <g filter="url(#glow-outline)">
+    <!-- 4 outline shape: vertical right bar + horizontal middle + diagonal top -->
+    <polyline points="400,38 400,148 416,148 416,38" fill="none" stroke="#c8ff00" stroke-width="4.5" stroke-linejoin="miter"/>
+    <line x1="366" y1="100" x2="420" y2="100" stroke="#c8ff00" stroke-width="4.5"/>
+    <polyline points="400,38 366,100" fill="none" stroke="#c8ff00" stroke-width="4.5" stroke-linecap="square"/>
+    <line x1="366" y1="100" x2="366" y2="118" stroke="#c8ff00" stroke-width="4.5"/>
+  </g>
+
+  <!-- "o" — chamfered rectangle outline (gaming style) -->
+  <g filter="url(#glow-outline)">
+    <!-- Outer chamfered rect -->
+    <polygon points="440,52 448,44 518,44 526,52 526,136 518,144 448,144 440,136"
+             fill="none" stroke="#c8ff00" stroke-width="4.5" stroke-linejoin="miter"/>
+    <!-- Inner chamfered rect (the cutout) -->
+    <polygon points="454,68 460,62 506,62 512,68 512,120 506,126 460,126 454,120"
+             fill="none" stroke="#c8ff00" stroke-width="3" stroke-linejoin="miter"/>
+  </g>
+
+  <!-- ========== FLIP ARROWS (double arrow icon) ========== -->
+  <g filter="url(#violet-shadow)" transform="translate(0, 8)">
+    <!-- Right arrow -->
+    <polyline points="148,168 270,168 270,152 304,180 270,208 270,192 148,192"
+              fill="none" stroke="#c8ff00" stroke-width="5" stroke-linejoin="miter" stroke-linecap="square"/>
+    <!-- Left arrow -->
+    <polyline points="286,176 164,176 164,160 130,188 164,216 164,200 286,200"
+              fill="none" stroke="#c8ff00" stroke-width="5" stroke-linejoin="miter" stroke-linecap="square"/>
+  </g>
+
+  <!-- ========== 4-POINTED STAR (decorative) ========== -->
+  <g transform="translate(645, 210)">
+    <path d="M0,-14 L3,-3 L14,0 L3,3 L0,14 L-3,3 L-14,0 L-3,-3 Z" fill="#888888" opacity="0.7"/>
+  </g>
+</svg>

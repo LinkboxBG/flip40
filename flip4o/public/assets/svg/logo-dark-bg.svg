@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 480" width="960" height="480" role="img" aria-label="FLIP40.COM Logo Dark">
+  <defs>
+    <!-- Multi-layer lime glow — mimics neon tube light -->
+    <filter id="neon-lime" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="4"  result="b1"/>
+      <feGaussianBlur stdDeviation="10" result="b2"/>
+      <feGaussianBlur stdDeviation="22" result="b3"/>
+      <feGaussianBlur stdDeviation="44" result="b4"/>
+      <feMerge>
+        <feMergeNode in="b4"/>
+        <feMergeNode in="b3"/>
+        <feMergeNode in="b2"/>
+        <feMergeNode in="b1"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="neon-outline" x="-25%" y="-25%" width="150%" height="150%">
+      <feGaussianBlur stdDeviation="3" result="b1"/>
+      <feGaussianBlur stdDeviation="8" result="b2"/>
+      <feMerge>
+        <feMergeNode in="b2"/>
+        <feMergeNode in="b1"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Violet offset shadow for arrows -->
+    <filter id="violet-depth" x="-20%" y="-20%" width="150%" height="150%">
+      <feOffset dx="-6" dy="6" in="SourceGraphic" result="shifted"/>
+      <feFlood flood-color="#9b5cf6" flood-opacity="0.9" result="color"/>
+      <feComposite in="color" in2="shifted" operator="in" result="violet-layer"/>
+      <feMerge>
+        <feMergeNode in="violet-layer"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Radial vignette -->
+    <radialGradient id="vignette" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#0a0a0a" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.8"/>
+    </radialGradient>
+
+    <!-- Ambient lime glow behind logo -->
+    <radialGradient id="ambient-lime" cx="50%" cy="45%" r="35%">
+      <stop offset="0%" stop-color="#b8ff00" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#b8ff00" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="960" height="480" fill="#080808"/>
+
+  <!-- Ambient glow behind logo -->
+  <rect width="960" height="480" fill="url(#ambient-lime)"/>
+
+  <!-- Vignette -->
+  <rect width="960" height="480" fill="url(#vignette)"/>
+
+  <!-- Scanlines -->
+  <rect width="960" height="480" fill="url(#scanlines)" opacity="0.03"/>
+
+  <!-- ===================== FLIP TEXT ===================== -->
+  <g filter="url(#neon-lime)" transform="translate(155, 70)">
+    <!-- F -->
+    <rect x="0"   y="0"  width="20" height="130" fill="#c8ff00"/>
+    <rect x="0"   y="0"  width="88" height="22"  fill="#c8ff00"/>
+    <rect x="0"   y="56" width="66" height="20"  fill="#c8ff00"/>
+    <rect x="14"  y="32" width="9"  height="5"   fill="#080808" opacity="0.55"/>
+    <rect x="28"  y="76" width="7"  height="4"   fill="#080808" opacity="0.45"/>
+
+    <!-- L (x+108) -->
+    <rect x="108" y="0"  width="20" height="130" fill="#c8ff00"/>
+    <rect x="108" y="112" width="84" height="18" fill="#c8ff00"/>
+    <rect x="120" y="44" width="8"  height="6"   fill="#080808" opacity="0.5"/>
+
+    <!-- I (x+216) -->
+    <rect x="214" y="0"  width="20" height="130" fill="#c8ff00"/>
+    <rect x="217" y="50" width="10" height="6"   fill="#080808" opacity="0.55"/>
+    <rect x="215" y="22" width="7"  height="7"   fill="#080808" opacity="0.4"/>
+
+    <!-- P (x+258) -->
+    <rect x="258" y="0"  width="20" height="130" fill="#c8ff00"/>
+    <rect x="258" y="0"  width="86" height="20"  fill="#c8ff00"/>
+    <rect x="328" y="0"  width="20" height="66"  fill="#c8ff00"/>
+    <rect x="258" y="56" width="90" height="20"  fill="#c8ff00"/>
+    <!-- P cutout -->
+    <rect x="278" y="20" width="50" height="36"  fill="#080808"/>
+    <rect x="262" y="100" width="8" height="6"   fill="#080808" opacity="0.5"/>
+  </g>
+
+  <!-- ===================== 4o ===================== -->
+  <g filter="url(#neon-outline)" transform="translate(660, 85)">
+    <!-- "4" -->
+    <line x1="64" y1="10"  x2="10"  y2="106" stroke="#c8ff00" stroke-width="6" stroke-linecap="square"/>
+    <line x1="10" y1="106" x2="90"  y2="106" stroke="#c8ff00" stroke-width="6" stroke-linecap="square"/>
+    <line x1="64" y1="10"  x2="64"  y2="170" stroke="#c8ff00" stroke-width="6" stroke-linecap="square"/>
+    <line x1="78" y1="10"  x2="78"  y2="170" stroke="#c8ff00" stroke-width="6" stroke-linecap="square"/>
+
+    <!-- "o" chamfered rect (x+100) -->
+    <polygon points="108,22 118,10 206,10 216,22 216,158 206,170 118,170 108,158"
+             fill="none" stroke="#c8ff00" stroke-width="6" stroke-linejoin="miter"/>
+    <polygon points="124,52 132,42 192,42 200,52 200,128 192,138 132,138 124,128"
+             fill="none" stroke="#c8ff00" stroke-width="4" stroke-linejoin="miter"/>
+  </g>
+
+  <!-- ===================== DOUBLE ARROW ===================== -->
+  <g filter="url(#violet-depth)" transform="translate(155, 295)">
+    <!-- Arrow →  (top) -->
+    <polyline points="0,0 200,0 200,-22 260,28 200,78 200,56 0,56"
+              fill="none" stroke="#c8ff00" stroke-width="7"
+              stroke-linejoin="miter" stroke-linecap="square"/>
+    <!-- Arrow ← (bottom, offset) -->
+    <polyline points="220,18 20,18 20,-4 -40,46 20,96 20,74 220,74"
+              fill="none" stroke="#c8ff00" stroke-width="7"
+              stroke-linejoin="miter" stroke-linecap="square"
+              opacity="0.9"/>
+  </g>
+
+  <!-- ===================== STAR ACCENT ===================== -->
+  <g transform="translate(894, 432)">
+    <path d="M0,-18 L4,-4 L18,0 L4,4 L0,18 L-4,4 L-18,0 L-4,-4 Z"
+          fill="#666666" opacity="0.65"/>
+  </g>
+
+  <!-- Small star, top area decorative -->
+  <g transform="translate(860, 80)" opacity="0.3">
+    <path d="M0,-8 L2,-2 L8,0 L2,2 L0,8 L-2,2 L-8,0 L-2,-2 Z" fill="#c8ff00"/>
+  </g>
+</svg>
